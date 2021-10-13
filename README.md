@@ -20,25 +20,28 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
 ## Run local chaoin from hardhat:
 npx hardhat node
 
-## Deploy contracts using truffle:
-truffle migrate --reset --network develop
-
-## Initialize front-end app
-cd client
-npm install
-npm start
-
-## Initialize back-end app 
-cd server
-npm install
-npm install pm2@latest -g
-pm2 start index.js --watch
-
-
-
 # truffle unit test
+```
 truffle test ./test/TestSimpleStorage.sol
 truffle test ./test/simplestorage.js 
+```
+
+
+# Compile the smart contracts:
+```truffle compile```
+
+
+## create local blockchain using truffle:
+To deploy our smart contracts, we're going to need to connect to a blockchain. Truffle has a built-in personal blockchain that can be used for testing. This blockchain is local to your system and does not interact with the main Ethereum network.
+
+You can create this blockchain and interact with it using Truffle Develop.
+```truffle develop```
+
+On the Truffle Develop prompt, Truffle commands can be run by omitting the truffle prefix. For example, to run truffle compile on the prompt, type compile. The command to deploy your compiled contracts to the blockchain is truffle migrate, so at the prompt, type:
+```migrate```
+
+## Deploy contracts using truffle:
+```truffle migrate --reset --network develop```
 
 
 # Install brownie 
