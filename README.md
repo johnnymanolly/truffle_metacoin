@@ -11,15 +11,6 @@ or from npm
 or    
 ```truffle init (with no smart contract)```  
 
-## And also hardhat dependencies were added
-npm install --save-dev hardhat   
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers   
-
--------------------------------------------
-
-## Run local chaoin from hardhat:
-npx hardhat node
-
 # truffle unit test
 ```
 truffle test ./test/TestSimpleStorage.sol
@@ -38,10 +29,24 @@ You can create this blockchain and interact with it using Truffle Develop.
 ```truffle develop```
 
 On the Truffle Develop prompt, Truffle commands can be run by omitting the truffle prefix. For example, to run truffle compile on the prompt, type compile. The command to deploy your compiled contracts to the blockchain is truffle migrate, so at the prompt, type:
+
+## Deploy:
 ```migrate```
 
-## Deploy contracts using truffle:
+## Deploy contracts using truffle unsing config:
 ```truffle migrate --reset --network develop```
+
+
+
+# Install hardhat
+npm install --save-dev hardhat   
+npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers   
+
+-------------------------------------------
+
+## Run local chain from hardhat:
+npx hardhat node
+
 
 
 # Install brownie 
