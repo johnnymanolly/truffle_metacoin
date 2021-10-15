@@ -1,22 +1,26 @@
-## Install truffle from snaps
+## Install truffle from npm
 `sudo dnf install snapd`   
 `sudo ln -s /var/lib/snapd/snap /snap`   
 `sudo snap install truffle --beta`   
 
-or from npm
+## or from snaps
 ```npm install -g truffle```
 
-## The project was initialized by truffle:
+## The project can be initialized by truffle:
+```truffle unbox metacoin```
+or
 ```truffle unbox react```   
 or    
 ```truffle init (with no smart contract)```  
+
+## for this tutorials we will initiate the project using 
+```truffle unbox metacoin```
 
 # truffle unit test
 ```
 truffle test ./test/TestSimpleStorage.sol
 truffle test ./test/simplestorage.js 
 ```
-
 
 # Compile the smart contracts:
 ```truffle compile```
@@ -35,6 +39,15 @@ On the Truffle Develop prompt, Truffle commands can be run by omitting the truff
 
 ## Deploy contracts using truffle unsing config:
 ```truffle migrate --reset --network develop```
+
+
+
+
+
+
+
+
+
 
 
 
